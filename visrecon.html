@@ -1,10 +1,15 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <meta charset="utf-8" />
     <title>Visual Recon</title>
+    <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="bootstrap-3.2.0-dist/css/bootstrap-responsive.css" rel="stylesheet"> -->
     <script src="javascript/backbone-min.js"></script>
     <script src="javascript/jquery-1.11.1.min.js"></script>
     <script src="javascript/underscore-min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+
   </head>
 
 
@@ -28,129 +33,117 @@ Click on the links below to watch the “Phase 1” video and read the related n
 <!-- LEGEND - hidden by default - slides out -->
 
 <div id="legend">
-    <p><b>Map Legend</b> (Click to close)</p>
+    <nav class="slide-out-menu transition">
+        <div class="toggle-primary-toc pull-right">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="pull-left primary-toc">
+            
+            <p><b>Map Legend</b> (Click to close)</p>
+            <ul>
+                <div class="legend_key">
+                    <div class="key_image">
+                        <img src="oldmedia/legendSwatch1.jpg">
+                    </div>
+                    <div class="key_description">
+                            Glacial sands and gravels with scrub oak and pine
+                    </div>
+                </div>
 
-    <div class="legend_key">
-        <div class="key_image">
-            <img src="oldmedia/legendSwatch1.jpg">
-        </div>
-        <div class="key_description">
-            <p>
-                Glacial sands and gravels with scrub oak and pine
-            </p>
-        </div>
-    </div>
+                <div class="legend_key">
+                    <div class="key_image">
+                        <img src="oldmedia/legendSwatch2.jpg">
+                    </div>
+                    <div class="key_description">
+                            Loess wth mixed diciduous forest
+                    </div>
+                </div>
 
-    <div class="legend_key">
-        <div class="key_image">
-            <img src="oldmedia/legendSwatch2.jpg">
-        </div>
-        <div class="key_description">
-            <p>
-                Loess wth mixed diciduous forest
-            </p>
-        </div>
-    </div>
+                <div class="legend_key">
+                    <div class="key_image">
+                        <img src="oldmedia/legendSwatch3.jpg">
+                    </div>
+                    <div class="key_description">
+                            Dirt
+                    </div>
+                </div>
 
-    <div class="legend_key">
-        <div class="key_image">
-            <img src="oldmedia/legendSwatch3.jpg">
-        </div>
-        <div class="key_description">
-            <p>
-                Dirt
-            </p>
-        </div>
-    </div>
+                <div class="legend_key">
+                    <div class="key_image">
+                        <img src="oldmedia/legendSwatch4.jpg">
+                    </div>
+                    <div class="key_description">
+                            Asphalt
+                    </div>
+                </div>
 
-    <div class="legend_key">
-        <div class="key_image">
-            <img src="oldmedia/legendSwatch4.jpg">
-        </div>
-        <div class="key_description">
-            <p>
-                Asphalt
-            </p>
-        </div>
-    </div>
-
-    <div class="legend_key">
-        <div class="key_image">
+                <div class="legend_key">
+                    <div class="key_image">
             <img src="oldmedia/legendSwatch5.jpg">
-        </div>
-        <div class="key_description">
-            <p>
-                Dirt/gravel road
-            </p>
-        </div>
-    </div>
+                    </div>
+                    <div class="key_description">
+                            Dirt/gravel road
+                    </div>
+                </div>
 
-    <div class="legend_key">
-        <div class="key_image">
-            <img src="oldmedia/legendSwatch6.jpg">
-        </div>
-        <div class="key_description">
-            <p>
-                Building
-            </p>
-        </div>
-    </div>
+                <div class="legend_key">
+                    <div class="key_image">
+                        <img src="oldmedia/legendSwatch6.jpg">
+                    </div>
+                    <div class="key_description">
+                            Building
+                    </div>
+                </div>
 
-    <div class="legend_key">
-        <div class="key_image">
-            <img src="oldmedia/legendSwatch7.jpg">
-        </div>
-        <div class="key_description">
-            <p>
-                Fence
-            </p>
-        </div>
-    </div>
+                <div class="legend_key">
+                    <div class="key_image">
+                        <img src="oldmedia/legendSwatch7.jpg">
+                    </div>
+                    <div class="key_description">
+                            Fence
+                    </div>
+                </div>
 
-    <div class="legend_key">
-        <div class="key_image">
-            <img src="oldmedia/legendSwatch8.jpg">
-        </div>
-        <div class="key_description">
-            <p>
-                Trees
-            </p>
-        </div>
-    </div>
+                <div class="legend_key">
+                    <div class="key_image">
+                        <img src="oldmedia/legendSwatch8.jpg">
+                    </div>
+                    <div class="key_description">
+                            Trees
+                    </div>
+                </div>
 
-    <div class="legend_key">
-        <div class="key_image">
-            <img src="oldmedia/legendSwatch9.jpg">
-        </div>
-        <div class="key_description">
-            <p>
-                Cultivated Shrubs
-            </p>
-        </div>
-    </div>
+                <div class="legend_key">
+                    <div class="key_image">
+                        <img src="oldmedia/legendSwatch9.jpg">
+                    </div>
+                    <div class="key_description">
+                            Cultivated Shrubs
+                    </div>
+                </div>
 
-    <div class="legend_key">
-        <div class="key_image">
-            <img src="oldmedia/legendSwatch10.jpg">
-        </div>
-        <div class="key_description">
-            <p>
-                Grapes (vineyard)
-            </p>
-        </div>
-    </div>
+                <div class="legend_key">
+                    <div class="key_image">
+                        <img src="oldmedia/legendSwatch10.jpg">
+                    </div>
+                   <div class="key_description">
+                            Grapes (vineyard)
+                    </div>
+                </div>
 
-    <div class="legend_key">
-        <div class="key_image">
-            <img src="oldmedia/legendSwatch11.jpg">
+                <div class="legend_key">
+                    <div class="key_image">
+                        <img src="oldmedia/legendSwatch11.jpg">
+                    </div>
+                    <div class="key_description">
+                            Sod
+                    </div>
+                </div>
+            </ul>
         </div>
-        <div class="key_description">
-            <p>
-                Sod
-            </p>
-        </div>
-    </div>
-
+    </nav>
 
 
 </div>
@@ -344,9 +337,296 @@ Click on the links below to watch the “Phase 1” video and read the related n
                        second or third growth forest with dense undergrowth and many intermediate trees.\
                        The same can be seen on the SE corner but older treese dominate the SW corner\
                        which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    10 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/kameKondos1.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    11 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/selfLume2.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    12 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/fallowHome1.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    13 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/kameKondos1.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    14 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/selfLume2.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    15 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/tillies.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    16 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/SelfLume_ClearedZone.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    17 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/SelfLume_EastWall.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    18 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/selfLume1.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    19 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/fourHomes1.jpgf",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    20 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/vinyards1.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    21 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/eolianAcers1.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    22 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/townWell1.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    23 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/ScrubBushes.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
+                    </div>'},
+
+    24 : { 'title' : '<div id="title">Fallow Farm</div>',
+          'photo' : "oldmedia/locations/muniGovt1.jpg",
+          'paragraph': '<div id="paragraph">\
+                       11:05 AM - Leaving the Self-Lume site and turning right onto\
+                       Loess Lane heading E. On the N side of the road about 200 ft.\
+                       down from the Self-Lume entrance is a road running straight to\
+                       a large red barn and then another 150 ft. down the road is a \
+                       driveway and a garage followed by a large two story red sandstone home.\
+                       There is a sign near the mailbox which indicates that this home is an\
+                       Esker County historic site and was build in 1837 as apart of the Fallow Farm.\
+                       The mailbox also says Meredith and James Fallow (25 Loess Lane) so \
+                       I presume tha some part of the family continues to live here. The home\
+                       sits on the NW corner of Loess Lane and Erratic Avenue and is nicely \
+                       landscaped with several very large elegant oaks. On the NE corner there is a \
+                       second or third growth forest with dense undergrowth and many intermediate trees.\
+                       The same can be seen on the SE corner but older treese dominate the SW corner\
+                       which is the NE corner of the Self-Lume site.\
                     </div>'}
 
-} 
+}
+
+
 
 
 function get_next()
