@@ -5,6 +5,10 @@
     <title>Visual Recon</title>
     <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="bootstrap-3.2.0-dist/css/bootstrap-responsive.css" rel="stylesheet"> -->
+    <style>ul
+{
+    list-style-type: none;
+}</style>
     <script src="javascript/backbone-min.js"></script>
     <script src="javascript/jquery-1.11.1.min.js"></script>
     <script src="javascript/underscore-min.js"></script>
@@ -27,13 +31,47 @@ Welcome to the demonstration page for the Brownfield Action Simulation. Guided i
 
 Click on the links below to watch the “Phase 1” video and read the related newspaper article. Both introduce a central character, Seymour Buckmeister, as well as the Phase 1 environmental site assessment (ESA). Student environmental consulting companies see the video and read the newspaper article before they sign a contract with Malls-R-Us to perform a Phase 1 ESA and start using the simulation.  
 
-</div>
+</div><!-- END OF INSTRUCTIONS -->
+
+
+<br><br>
+
+<!-- USER INFO -->
+<div id="user_info">
+<b>Brownfield Demo</b><br>
+<button>Budget</button> {{team.budget}}<br>
+<button>Documents</button><br>
+<!-- I'm not sure I'm happy with this interface, I think it should be a drop down or on the top in a toolbar, the interactive is not really big and having the documents as a pop up box would annoy me. -->
+</div><!-- END OF USER INFO -->
+
+
+
+<!-- MAP CONTROLS -->
+<div id="map_controls">
+<b>Map Controls</b><br>
+<!-- need to add zoom bar - cant read legend - out mid and ?
+After user is zoomed into map they can click and drag
+need to add JS for that
+-->
+<img src="oldmedia/minimapTrees.jpg"><br>
+<label for="show_trees">Show Trees</label>
+<input type="checkbox" id="show_trees"><br>
+<label for="show_leger">Show Leger</label>
+<input type="checkbox" id="show_leger"><br>
+<button id="leger_button">Show/Hide Leger</button>
+</div><!-- END OF MAP CONTROLS -->
+
+
+
+
+
+
+
+
 
 
 <!-- LEGEND - hidden by default - slides out -->
-
-<div id="legend">
-    <nav class="slide-out-menu transition">
+<script type="template "id="leger">
         <div class="toggle-primary-toc pull-right">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -42,14 +80,18 @@ Click on the links below to watch the “Phase 1” video and read the related n
         <div class="pull-left primary-toc">
             
             <p><b>Map Legend</b> (Click to close)</p>
-            <ul>
+            <dl>
                 <div class="legend_key">
+                <dt>
                     <div class="key_image">
                         <img src="oldmedia/legendSwatch1.jpg">
                     </div>
+                </dt>
+                <dd>
                     <div class="key_description">
                             Glacial sands and gravels with scrub oak and pine
                     </div>
+                </dd>
                 </div>
 
                 <div class="legend_key">
@@ -141,12 +183,10 @@ Click on the links below to watch the “Phase 1” video and read the related n
                             Sod
                     </div>
                 </div>
-            </ul>
+            </dl>
         </div>
     </nav>
-
-
-</div>
+</script><!-- END OF LEGEND -->
 
 
 <!-- MAP_IMAGE -->
@@ -665,6 +705,11 @@ function get_previous()
 
 
 jQuery('#continue').click(function() {get_next(current_page);});
+
+
+jQuery('#leger_button').click(function() {jQuery("#map_controls").append(jQuery('#leger').html()));
+
+
 </script>
  
 
