@@ -10,7 +10,6 @@
     <script src="javascript/jquery-1.11.1.min.js"></script>
     <script src="javascript/underscore-min.js"></script>
     <script src="javascript/bootstrap.min.js"></script>
-
   </head>
 
 
@@ -22,11 +21,18 @@
 <!-- INSTRUCTIONS -->
 <div id="instructions">
 
-Welcome to the demonstration page for the Brownfield Action Simulation. Guided instructions are provided to help familiarize you with the simulation. Alternatively, you may explore the sim on your own.
+Welcome to the demonstration page for the Brownfield Action Simulation.
+Guided instructions are provided to help familiarize you with the simulation.
+Alternatively, you may explore the sim on your own.
 
 <b>GUIDED INSTRUCTIONS</b>
 
-Click on the links below to watch the “Phase 1” video and read the related newspaper article. Both introduce a central character, Seymour Buckmeister, as well as the Phase 1 environmental site assessment (ESA). Student environmental consulting companies see the video and read the newspaper article before they sign a contract with Malls-R-Us to perform a Phase 1 ESA and start using the simulation.  
+Click on the links below to watch the “Phase 1” video and read the related newspaper article.
+Both introduce a central character, Seymour Buckmeister, 
+as well as the Phase 1 environmental site assessment (ESA). 
+Student environmental consulting companies see the video and read the newspaper
+ article before they sign a contract with Malls-R-Us to perform a Phase 1 ESA
+ and start using the simulation.  
 
 </div><!-- END OF INSTRUCTIONS -->
 
@@ -38,7 +44,10 @@ Click on the links below to watch the “Phase 1” video and read the related n
 <b>Brownfield Demo</b><br>
 <button>Budget</button> {{team.budget}}<br>
 <button>Documents</button><br>
-<!-- I'm not sure I'm happy with this interface, I think it should be a drop down or on the top in a toolbar, the interactive is not really big and having the documents as a pop up box would annoy me. -->
+<!-- I'm not sure I'm happy with this interface, 
+I think it should be a drop down or on the top in a toolbar, 
+the interactive is not really big and having the documents as 
+a pop up box would annoy me. -->
 </div><!-- END OF USER INFO -->
 
 
@@ -61,14 +70,9 @@ need to add JS for that
 
 
 
-
-
-
-
-
-
 <!-- LEGEND - hidden by default - slides out -->
-<!-- <script type="template "id="leger"> -->
+<!-- <script type="template" "id="leger"> -->
+
         <div class="pull-left primary-toc">
             <p><b>Map Legend</b> (Click to close)</p>
             <dl>
@@ -176,7 +180,7 @@ need to add JS for that
                 </div>
             </dl>
         </div>
-    </nav>
+
 <!-- </script> --><!-- END OF LEGEND -->
 
 
@@ -187,7 +191,6 @@ need to add JS for that
 
 
 <div id="interactiveinstructions">
-
 
     <div id="interactive">
       <div class="recon-content">
@@ -206,14 +209,7 @@ need to add JS for that
       <button id="continue" class="begin">Continue</button>
     </div>
   </div>
-
-   
-
-
-
-
-
-
+</div>
 
 <script>
 
@@ -316,8 +312,7 @@ need to add JS for that
                        sorted (and sordid?) debris.\
                     </div>'},
                     
-                    
-    8 : { 'title' : '<div id="title">Self-Lume Factory</div>',
+          8 : { 'title' : '<div id="title">Self-Lume Factory</div>',
           'photo' : "oldmedia/locations/selfLume1.jpg",
           'paragraph': '<div id="paragraph">\
                        10:30 - Ive finally arrived at the front entrance to the abandoned, \
@@ -369,6 +364,9 @@ need to add JS for that
                        The same can be seen on the SE corner but older treese dominate the SW corner \
                        which is the NE corner of the Self-Lume site.\
                     </div>'},
+
+
+
 
     10 : { 'title' : '<div id="title">Fallow Farm</div>',
           'photo' : "oldmedia/locations/kameKondos1.jpg",
@@ -437,6 +435,7 @@ need to add JS for that
                        building close to weternmost loading dock. Rather than begin an interior \
                        inspection I decide to have lunch.\
                     </div>'},
+
 
     13 : { 'title' : '<div id="title">Fallow Farm</div>',
           'photo' : "oldmedia/locations/kameKondos1.jpg",
@@ -664,8 +663,7 @@ need to add JS for that
                        second or third growth forest with dense undergrowth and many intermediate trees.\
                        The same can be seen on the SE corner but older treese dominate the SW corner\
                        which is the NE corner of the Self-Lume site.\
-                    </div>'}
-
+                    </div>'}              
 }
 
 
@@ -696,7 +694,7 @@ function get_previous()
 
 
 jQuery('#continue').click(function() {get_next(current_page);});
-
+jQuery('#go-back').click(function() {get_previous(current_page);});
 
 jQuery('#leger_button').click(function() {jQuery("#map_controls").append(jQuery('#leger').html()));
 
