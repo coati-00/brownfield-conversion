@@ -1,12 +1,7 @@
 from django.db import models
 
-SITE_TYPE = (
-    ('CM', 'Commercial'),
-    ('GV', 'Government'),
-    ('RS', 'Residential'),
-)
 
-COMMERCIAL_SITES = (
+LOCATION_SITES = (
     ('BX', 'BTEX Gas Station'),
     ('FF', 'Firn Freeze'),
     ('KB', 'Kilroy\'s Bar'),
@@ -15,13 +10,9 @@ COMMERCIAL_SITES = (
     ('SL', 'Self-Lume Factory'),
     ('TD', 'Tillies All-Night Diner'),
     ('WN', 'Wedging Nursery'),
-)
-GOVERNMENT_SITES = (
     ('MG', 'Municipal Government'),
     ('TW', 'Town Well'),
     ('WT', 'Water Tower'),
-)
-RESIDENTIAL_SITES = (
     ('EA', 'Eolian Acres'),
     ('FH', 'Fallow Home'),
     ('FE', 'Four Homes on Erratic'),
@@ -29,16 +20,6 @@ RESIDENTIAL_SITES = (
 )
 
 TEST_TYPE = (
-    ('DRP', 'Drilling/Push'),
-    ('EXC', 'Excavation'),
-    ('MMD', 'MMD'),
-    ('SGS', 'SGSA'),
-    ('SRR', 'SRR'),
-    ('TPS', 'Topographic Survey'),
-    ('SPT', 'Super Test'),
-)
-
-PEOPLE_INTERVIEW = (
     ('DRP', 'Drilling/Push'),
     ('EXC', 'Excavation'),
     ('MMD', 'MMD'),
@@ -60,6 +41,15 @@ class SiteHistory(models.Model):
     site_history = models.TextField(default='')
     image_1 = models.ImageField(default='')
     image_2 = models.ImageField(default='')
+
+class PeopleSiteHistory(models.Model):
+    location = models.ForeignKey(SiteHistory, null=True, blank=True)
+    name = models.CharField(default='')
+
+class Interview(models.Model):
+    person = models.ForeignKey(PeopleSiteHistory, null=True, blank=True)
+    question = models.CharField(default='')
+    answer = models.TextField(default='')
 
 class Testing(models.Model):
     test_type = models.CharField(max_length=3, choices=TEST_TYPE, unique=True)
