@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Visual Recon</title>
+    <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="bootstrap-3.2.0-dist/css/bootstrap-responsive.css" rel="stylesheet"> -->
+    <style></style>
+    <script src="javascript/backbone-min.js"></script>
+    <script src="javascript/jquery-1.11.1.min.js"></script>
+    <script src="javascript/underscore-min.js"></script>
+    <script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+  </head>
+
+
+
+
+
+  <body>
+
+<!-- INSTRUCTIONS -->
+<div id="instructions">
+
+Welcome to the demonstration page for the Brownfield Action Simulation.
+Guided instructions are provided to help familiarize you with the simulation.
+Alternatively, you may explore the sim on your own.
+
+<b>GUIDED INSTRUCTIONS</b>
+
+Click on the links below to watch the “Phase 1” video and read the related newspaper article.
+Both introduce a central character, Seymour Buckmeister, 
+as well as the Phase 1 environmental site assessment (ESA). 
+Student environmental consulting companies see the video and read the newspaper
+ article before they sign a contract with Malls-R-Us to perform a Phase 1 ESA
+ and start using the simulation.  
+
+</div><!-- END OF INSTRUCTIONS -->
+
+
+<br><br>
+
+<!-- USER INFO -->
+<div id="user_info">
+<b>Brownfield Demo</b><br>
+<button>Budget</button> {{team.budget}}<br>
+<button>Documents</button><br>
+<!-- I'm not sure I'm happy with this interface, 
+I think it should be a drop down or on the top in a toolbar, 
+the interactive is not really big and having the documents as 
+a pop up box would annoy me. -->
+</div><!-- END OF USER INFO -->
+
+
+
+<!-- MAP CONTROLS -->
+<div id="map_controls">
+<b>Map Controls</b><br>
+<!-- need to add zoom bar - cant read legend - out mid and ?
+After user is zoomed into map they can click and drag
+need to add JS for that
+-->
+<img src="oldmedia/minimapTrees.jpg"><br>
+<label for="show_trees">Show Trees</label>
+<input type="checkbox" id="show_trees"><br>
+<label for="show_leger">Show Leger</label>
+<input type="checkbox" id="show_leger"><br>
+<button id="leger_button">Show/Hide Leger</button>
+</div><!-- END OF MAP CONTROLS -->
+
+
+<!-- MAP_IMAGE -->
+<div id="map">
+ <img src="oldmedia/fullMap.jpg" width="761" height="521" align="middle"> 
+</div>
+
+
+<div id="interactiveinstructions">
+
+    <div id="interactive">
+      <div class="history-content">
+        <b>Choose a location:</b>
+        <p>Pick a location by clicking on it on the map or by selecting it from the menu above.
+           Visiting a location costs $25. When interviewing someone, questions cost $1 each.<p>
+
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+    BTEX Gas Station
+    <span class="caret"></span>
+  </button>
+
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation" class="dropdown-header">Commercial Sites</li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">BTEX Gas Station</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Firn Freeze</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Kilroy's Bar</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Plucker's Scrap Metal</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Roche Mountonee Vineyard</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Self-Lume Factory</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tillies All-Night Diner</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wedging Nursery</a></li>
+    <li role="presentation" class="divider"></li>
+    <li role="presentation" class="dropdown-header">Government</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Municipal Government</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Town Well</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Water Tower</a></li>
+    <li role="presentation" class="divider"></li>
+    <li role="presentation" class="dropdown-header">Government</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Eolian Acres</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fallow Home</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Four Homes on Erratic</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Kame Kondos</a></li>
+  </ul>
+</div>
+
+        <div id='site-history'>
+        </div>
+        <div id='photo1'>
+            <img src="" alt="" id="photo1_id">
+        </div>
+        <div id='photo2'>
+            <img src="" alt="" id="photo2_id">
+        </div>
+        <div id='title'>
+        </div>
+
+
+
+      <button id="visit" class="visit">Visit</button>
+    </div>
+  </div>
+</div>
+<!-- Need to add logic to see if element is actually visitable. -->
+<script>
+
+
+
+</script>
+ 
+
+</body>
+</html>
+
