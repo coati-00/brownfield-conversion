@@ -7,10 +7,11 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
+    url(r'^$',
+     TemplateView.as_view(template_name="brownfieldapp/visrecon.html")),
     url(r'^visual_reconnaissance/',
      TemplateView.as_view(template_name="brownfieldapp/visrecon.html")),
     # url(r'^$', 'brownfieldapp.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
     url(r'^admin/', include(admin.site.urls)),
 )
