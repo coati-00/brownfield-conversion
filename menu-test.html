@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Menu Test Recon</title>
+    <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="bootstrap-3.2.0-dist/css/bootstrap-responsive.css" rel="stylesheet"> -->
+    <style>
+    #leger {
+        display: inline-block;
+        position: relative;
+        float: left;
+        width:250px;
+    }
+    #leger ul {
+        list-style: none;
+
+    }
+    #leger li {
+        position:relative;
+        padding: .2em .6em;
+    }
+    #leger img {
+        position:relative;
+    }
+    </style>
+    <script src="javascript/backbone-min.js"></script>
+    <script src="javascript/jquery-1.11.1.min.js"></script>
+    <script src="javascript/underscore-min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+
+<!-- INSTRUCTIONS -->
+<div id="instructions">
+
+Welcome to the demonstration page for the Brownfield Action Simulation. Guided instructions are provided to help familiarize you with the simulation. Alternatively, you may explore the sim on your own.
+
+<b>GUIDED INSTRUCTIONS</b>
+
+Click on the links below to watch the “Phase 1” video and read the related newspaper article. Both introduce a central character, Seymour Buckmeister, as well as the Phase 1 environmental site assessment (ESA). Student environmental consulting companies see the video and read the newspaper article before they sign a contract with Malls-R-Us to perform a Phase 1 ESA and start using the simulation.  
+
+</div><!-- END OF INSTRUCTIONS -->
+
+
+<br><br>
+
+<!-- USER INFO -->
+<div id="user_info">
+<b>Brownfield Demo</b><br>
+<button>Budget</button> {{team.budget}}<br>
+<button>Documents</button><br>
+<!-- I'm not sure I'm happy with this interface, I think it should be a drop down or on the top in a toolbar, the interactive is not really big and having the documents as a pop up box would annoy me. -->
+</div><!-- END OF USER INFO -->
+
+
+
+<!-- MAP CONTROLS -->
+<div id="map_controls">
+    <b>Map Controls</b><br>
+    <!-- need to add zoom bar - cant read legend - out mid and ?
+    After user is zoomed into map they can click and drag
+    need to add JS for that
+    -->
+    <img src="oldmedia/minimapTrees.jpg"><br>
+    <label for="show_trees">Show Trees</label>
+    <input type="checkbox" id="show_trees"><br>
+    <label for="show_leger">Show Leger</label>
+    <input type="checkbox" id="show_leger"><br>
+    <button id="leger_button">Show/Hide Leger</button>
+</div><!-- END OF MAP CONTROLS -->
+
+
+
+
+
+
+
+
+
+
+<!-- LEGEND - hidden by default - slides out -->
+<!-- <script type="template "id="leger"> -->
+        <div id="leger" class="pull-left primary-toc">
+            <p><b>Map Legend</b> (Click to close)</p>
+            <ul>
+                <div class="legend_key">
+                <li>
+                        <img src="oldmedia/legendSwatch1.jpg">
+                            Glacial sands and gravels with scrub oak and pine
+                </li>
+                </div>
+
+                <div class="legend_key">
+                    <li>
+                            <img src="oldmedia/legendSwatch2.jpg">
+                            Loess wth mixed diciduous forest
+                    </li>
+                </div>
+
+                <div class="legend_key">
+                    <li>
+                            <img src="oldmedia/legendSwatch3.jpg">
+                                Dirt
+                    </li>
+                </div>
+
+                <div class="legend_key">
+                    <li>
+                            <img src="oldmedia/legendSwatch4.jpg">
+                            Asphalt
+                    </li>
+                </div>
+
+                <div class="legend_key">
+                    <li>
+                            <img src="oldmedia/legendSwatch5.jpg">
+                            Dirt/gravel road
+                    </li>
+                </div>
+
+                <div class="legend_key">
+                    <li>
+                            <img src="oldmedia/legendSwatch6.jpg">
+                            Building
+                    </li>
+                </div>
+
+                <div class="legend_key">
+                    <li>
+                            <img src="oldmedia/legendSwatch7.jpg">
+                            Fence
+                    </li>
+                </div>
+
+                <div class="legend_key">
+                    <li>
+                            <img src="oldmedia/legendSwatch8.jpg">
+                                Trees
+                    </li>
+                </div>
+
+                <div class="legend_key">
+                    <li>
+                            <img src="oldmedia/legendSwatch9.jpg">
+                            Cultivated Shrubs
+                    </li>
+                </div>
+
+                <div class="legend_key">
+                    <li>
+                            <img src="oldmedia/legendSwatch10.jpg">
+                            Grapes (vineyard)
+                    </li>
+                </div>
+
+                <div class="legend_key">
+                    <li>
+                            <img src="oldmedia/legendSwatch11.jpg">
+                            Sod
+                    </li>
+                </div>
+            </ul>
+        </div>
+
+<!-- </script> --><!-- END OF LEGEND -->
+
+
+<!-- MAP_IMAGE -->
+<div id="map">
+ <img src="oldmedia/fullMap.jpg" width="761" height="521" align="middle"> 
+</div>
+
+
+
+  
+<script>
+
+jQuery('#leger_button').click(function() {jQuery("#map_controls").append(jQuery('#leger').html()));
+
+
+</script>
+ 
+
+  </body>
+  
+</html>
+

@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Visual Recon</title>
+    <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="bootstrap-3.2.0-dist/css/bootstrap-responsive.css" rel="stylesheet"> -->
+    <style></style>
+    <script src="..{{STATIC_URL}}js/backbone-min.js"></script>
+    <script src="..{{STATIC_URL}}js/jquery-1.11.1.min.js"></script>
+    <script src="..{{STATIC_URL}}js/underscore-min.js"></script>
+    <script src="..{{STATIC_URL}}js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+
+<!-- INSTRUCTIONS -->
+<div id="instructions">
+INSIDE PROJECT TEMPLATES
+Welcome to the demonstration page for the Brownfield Action Simulation.
+Guided instructions are provided to help familiarize you with the simulation.
+Alternatively, you may explore the sim on your own.
+
+<b>GUIDED INSTRUCTIONS</b>
+
+Click on the links below to watch the “Phase 1” video and read the related newspaper article.
+Both introduce a central character, Seymour Buckmeister, 
+as well as the Phase 1 environmental site assessment (ESA). 
+Student environmental consulting companies see the video and read the newspaper
+ article before they sign a contract with Malls-R-Us to perform a Phase 1 ESA
+ and start using the simulation.  
+
+</div><!-- END OF INSTRUCTIONS -->
+
+
+<br><br>
+
+<!-- USER INFO -->
+<div id="user_info">
+<b>Brownfield Demo</b><br>
+<button>Budget</button> {{team.budget}}<br>
+<button>Documents</button><br>
+<!-- I'm not sure I'm happy with this interface, 
+I think it should be a drop down or on the top in a toolbar, 
+the interactive is not really big and having the documents as 
+a pop up box would annoy me. -->
+</div><!-- END OF USER INFO -->
+
+
+
+<!-- MAP CONTROLS -->
+<div id="map_controls">
+<b>Map Controls</b><br>
+<!-- need to add zoom bar - cant read legend - out mid and ?
+After user is zoomed into map they can click and drag
+need to add JS for that
+-->
+<img src="oldmedia/minimapTrees.jpg"><br>
+<label for="show_trees">Show Trees</label>
+<input type="checkbox" id="show_trees"><br>
+<label for="show_leger">Show Leger</label>
+<input type="checkbox" id="show_leger"><br>
+<button id="leger_button">Show/Hide Leger</button>
+</div><!-- END OF MAP CONTROLS -->
+
+
+<!-- MAP_IMAGE -->
+<div id="map">
+ <img src="oldmedia/fullMap.jpg" width="761" height="521" align="middle"> 
+</div>
+
+
+<div id="interactiveinstructions">
+
+    <div id="interactive">
+      <div class="recon-content">
+
+        <div id='photo'>
+            <img src="" alt="" id="photo_id">
+        </div>
+
+        <div id='title'>
+        </div>
+
+        <div id='paragraph'>
+        </div>
+
+      <button id="go-back" class="begin">Go Back</button>
+      <button id="continue" class="begin">Continue</button>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  var current_page = 0;
+
+function get_next()
+{
+    current_page = current_page + 1;
+    jQuery('#title').replaceWith(interactive_content[current_page].title);
+    jQuery("#photo img").attr( "src", function()
+       {
+           return interactive_content[current_page].photo;
+       });
+    jQuery('#paragraph').replaceWith(interactive_content[current_page].paragraph);
+}
+
+
+function get_previous()
+{
+    current_page = current_page - 1;
+    jQuery('#title').replaceWith(interactive_content[current_page].title);
+    jQuery("#photo img").attr( "src", function()
+       {
+           return interactive_content[current_page].photo;
+       });
+    jQuery('#paragraph').replaceWith(interactive_content[current_page].paragraph);
+}
+
+
+jQuery('#continue').click(function() {get_next(current_page);});
+jQuery('#go-back').click(function() {get_previous(current_page);});
+
+//jQuery('#leger_button').click(function() {jQuery("#map_controls").append(jQuery('#leger').html()));
+
+
+</script>
+ 
+
+  </body>
+  <script src="scripts/main.js"></script>
+</html>
+
