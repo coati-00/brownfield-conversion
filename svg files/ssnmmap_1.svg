@@ -60,10 +60,65 @@
     <circle cx="500" cy="500" r="200" fill="white" stroke="black" stroke-width="3"/>
 
     <rect class="draggable"
-          x="30"
+          x="15"
+          y="860"
+          width="20"
+          height="20"
+          fill="green"
+          transform="matrix(1 0 0 1 0 0)"
+          onmousedown="selectElement(evt)"/>
+
+    <rect class="draggable"
+          x="15"
+          y="895"
+          width="20"
+          height="20"
+          fill="yellow"
+          transform="matrix(1 0 0 1 0 0)"
+          onmousedown="selectElement(evt)"/>
+
+    <rect class="draggable"
+          x="15"
           y="930"
-          width="80"
-          height="80"
+          width="20"
+          height="20"
+          fill="red"
+          transform="matrix(1 0 0 1 0 0)"
+          onmousedown="selectElement(evt)"/>
+
+
+    <rect class="draggable"
+          x="900"
+          y="860"
+          width="20"
+          height="20"
+          fill="green"
+          transform="matrix(1 0 0 1 0 0)"
+          onmousedown="selectElement(evt)"/>
+
+    <rect class="draggable"
+          x="900"
+          y="895"
+          width="20"
+          height="20"
+          fill="green"
+          transform="matrix(1 0 0 1 0 0)"
+          onmousedown="selectElement(evt)"/>
+
+    <rect class="draggable"
+          x="900"
+          y="930"
+          width="20"
+          height="20"
+          fill="green"
+          transform="matrix(1 0 0 1 0 0)"
+          onmousedown="selectElement(evt)"/>
+
+    <rect class="draggable"
+          x="15"
+          y="860"
+          width="20"
+          height="20"
           fill="green"
           transform="matrix(1 0 0 1 0 0)"
           onmousedown="selectElement(evt)"/>
