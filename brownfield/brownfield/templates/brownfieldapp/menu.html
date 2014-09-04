@@ -1,112 +1,119 @@
-{% block menu %}
-<div "id="menu"> -->
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+    <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/static/brownfieldapp/js/underscore-min.js"></script>
+    <script src="/static/brownfieldapp/js/jquery-1.11.1.min.js"></script>
+    <script src="/static/brownfieldapp/js/backbone-min.js"></script>
+    <script src="/static/brownfieldapp/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    function displaymenu(id,x,y){ 
+        var submenu = jQuery("#submenu");
+        var menu = jQuery("#menu");
+        menu.on( "onmouseover", function() 
+        {
+            jQuery("#submenu").css("display", "block" );
+            //submenu.css("position", "absolute" );
+            //submenu.css("left", x );
+            //submenu.css("top", y );
+            
+        });
+        
 
-        <div class="pull-left primary-toc">
-            <p><b>Map Legend</b> (Click to close)</p>
-            <dl>
-                <div class="legend_key">
-                <dt>
-                    <div class="key_image">
-                        <img src="oldmedia/legendSwatch1.jpg">
-                    </div>
-                </dt>
-                <dd>
-                    <div class="key_description">
-                            Glacial sands and gravels with scrub oak and pine
-                    </div>
-                </dd>
-                </div>
+        
+        /*this javascript function displays the submenu. It has three arguments, first id of the element,
+        second x position of the menu to be shown and third y postion*/
+    
+        //node=document.getElementById(id);/*get the element's id which called this function and save it in the variable 'node'*/
+        //node.style.position='absolute';/*setting the postion to absolute so that it will get out of the flow of the page and then i will be able to position it accordingly*/
+        //node.style.left=x; /*setting the position of the submenu*/
+        //node.style.top=y;
+        //node.style.display='table';/*making the menu visible*/
+	}
+	
+    //function hidemenu(id){/*this fucntion hides the submenu*/
+    //    node=document.getElementById(id);
+   //     node.style.display='none';/*making the menu invisible*/
+    //}	
+    </script>	
+<title>Pop-Out Menu example by www.tomakewebsite.com</title>
+<style type="text/css">
+.menu{
+	position:relative;
+	width:180px;
+}
+.menu ul{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+.menu ul li{
+	border:1px solid;
+	padding:2px;
+	text-align:left;
+	display:block;
+}
+.hidden { display: none; }
+.unhidden { display: block; } 
+</style>
+</head>
 
-                <div class="legend_key">
-                    <div class="key_image">
-                        <img src="oldmedia/legendSwatch2.jpg">
-                    </div>
-                    <div class="key_description">
-                            Loess wth mixed diciduous forest
-                    </div>
-                </div>
 
-                <div class="legend_key">
-                    <div class="key_image">
-                        <img src="oldmedia/legendSwatch3.jpg">
-                    </div>
-                    <div class="key_description">
-                            Dirt
-                    </div>
-                </div>
+  <body>
 
-                <div class="legend_key">
-                    <div class="key_image">
-                        <img src="oldmedia/legendSwatch4.jpg">
-                    </div>
-                    <div class="key_description">
-                            Asphalt
-                    </div>
-                </div>
 
-                <div class="legend_key">
-                    <div class="key_image">
-            <img src="oldmedia/legendSwatch5.jpg">
-                    </div>
-                    <div class="key_description">
-                            Dirt/gravel road
-                    </div>
-                </div>
-
-                <div class="legend_key">
-                    <div class="key_image">
-                        <img src="oldmedia/legendSwatch6.jpg">
-                    </div>
-                    <div class="key_description">
-                            Building
-                    </div>
-                </div>
-
-                <div class="legend_key">
-                    <div class="key_image">
-                        <img src="oldmedia/legendSwatch7.jpg">
-                    </div>
-                    <div class="key_description">
-                            Fence
-                    </div>
-                </div>
-
-                <div class="legend_key">
-                    <div class="key_image">
-                        <img src="oldmedia/legendSwatch8.jpg">
-                    </div>
-                    <div class="key_description">
-                            Trees
-                    </div>
-                </div>
-
-                <div class="legend_key">
-                    <div class="key_image">
-                        <img src="oldmedia/legendSwatch9.jpg">
-                    </div>
-                    <div class="key_description">
-                            Cultivated Shrubs
-                    </div>
-                </div>
-
-                <div class="legend_key">
-                    <div class="key_image">
-                        <img src="oldmedia/legendSwatch10.jpg">
-                    </div>
-                   <div class="key_description">
-                            Grapes (vineyard)
-                    </div>
-                </div>
-
-                <div class="legend_key">
-                    <div class="key_image">
-                        <img src="oldmedia/legendSwatch11.jpg">
-                    </div>
-                    <div class="key_description">
-                            Sod
-                    </div>
-                </div>
-            </dl>
-        </div>
+<div id="submenu" class="menu hidden">
+    <ul>
+        <li>
+            <img src="static/brownfieldapp/legendSwatch1.jpg" alt="nepi-logo">
+            Glacial sands and gravels with scrub oak and pine
+        </li>
+        <li>
+            <img src="static/brownfieldapp/legendSwatch2.jpg" alt="nepi-logo">
+            Loess wth mixed diciduous forest
+        </li>
+        <li>
+            <img src="static/brownfieldapp/legendSwatch3.jpg" alt="nepi-logo">
+            Dirt
+        </li>
+        <li>
+            <img src="static/brownfieldapp/legendSwatch4.jpg" alt="nepi-logo">
+            Asphalt
+        </li>
+        <li>
+            <img src="static/brownfieldapp/legendSwatch5.jpg" alt="nepi-logo">
+             Dirt/gravel road
+        </li>
+        <li>
+            <img src="static/brownfieldapp/legendSwatch6.jpg" alt="nepi-logo">
+            Building
+        </li>
+        <li>
+            <img src="static/brownfieldapp/legendSwatch7.jpg" alt="nepi-logo">
+            Fence
+        </li>
+        <li>
+            <img src="static/brownfieldapp/legendSwatch8.jpg" alt="nepi-logo">
+            Trees
+        </li>
+        <li>
+            <img src="static/brownfieldapp/legendSwatch9.jpg" alt="nepi-logo">
+            Cultivated Shrubs
+        </li>
+        <li>
+            <img src="static/brownfieldapp/legendSwatch10.jpg" alt="nepi-logo">
+            Grapes (vineyard)
+        </li>
+        <li>
+            <img src="static/brownfieldapp/legendSwatch11.jpg" alt="nepi-logo">
+            Sod
+        </li>
+        
+    </ul>
 </div>
-{% endblock %}
+<div id="menu"><p onmouseover=displaymenu("submenu","180px","58px")>Menu</p></div>    
+    
+
+</body>
+</html>

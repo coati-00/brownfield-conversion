@@ -59,14 +59,15 @@
     <circle cx="500" cy="500" r="350" fill="red" stroke="black" stroke-width="3"/>
     <circle cx="500" cy="500" r="200" fill="white" stroke="black" stroke-width="3"/>
 
-    <rect class="draggable"
+    <rect> class="draggable"
           x="15"
           y="860"
           width="20"
           height="20"
           fill="green"
           transform="matrix(1 0 0 1 0 0)"
-          onmousedown="selectElement(evt)"/>
+          onmousedown="selectElement(evt)"
+    </rect>
 
     <rect class="draggable"
           x="15"
